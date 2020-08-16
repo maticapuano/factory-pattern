@@ -21,3 +21,19 @@ const libFactory = SuperLibFactory.create("Super factory", {
 console.log(libFactory.id);
 console.log(libFactory.name);
 console.log(libFactory.options);
+
+/**
+ * Using factory at id not auto-generated
+ */
+
+const libFactory1 = SuperLibFactory.create(
+  "Super factory",
+  {
+    next: true,
+  },
+  "super-id"
+);
+
+console.log(libFactory1.id);
+console.log(libFactory1.name);
+console.log(libFactory1.options);
