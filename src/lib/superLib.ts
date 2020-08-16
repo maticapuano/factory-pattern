@@ -1,7 +1,7 @@
 export class SuperLib {
   private readonly _name: string;
   private readonly _options: {};
-  private readonly _id: string;
+  private _id: string;
 
   constructor(id: string, name: string, options: {}) {
     this._id = id;
@@ -16,6 +16,6 @@ export class SuperLib {
     return this._options;
   }
   public get id(): string {
-    return this.id;
+    return this._id;
   }
 }
