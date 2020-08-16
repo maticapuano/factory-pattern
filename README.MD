@@ -1,6 +1,6 @@
 #Factory pattern Example in Typescript
 
-Instalation:
+Installation:
 
 ```bash
 yarn install
