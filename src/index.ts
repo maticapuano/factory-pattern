@@ -1,4 +1,6 @@
+import { DeliveryFactory } from "./factories/DelliverFactory";
 import { SuperLibFactory } from "./factories/superLib-factory";
+import { DeliverType, IDeliverFactory } from "./interfaces/IDeliverFactory";
 import { SuperLib } from "./lib/superLib";
 
 /**
@@ -37,3 +39,14 @@ const libFactory1 = SuperLibFactory.create(
 console.log(libFactory1.id);
 console.log(libFactory1.name);
 console.log(libFactory1.options);
+
+const deliverFactory = new DeliveryFactory();
+
+function deliver(factory: IDeliverFactory, deliverType: DeliverType) {
+  const deliver = factory.createDeliver(deliverType);
+
+  deliver.deliver();
+}
+
+deliver(deliverFactory, DeliverType.ship); //Ship one
+deliver(deliverFactory, DeliverType.truck); //Ship two
