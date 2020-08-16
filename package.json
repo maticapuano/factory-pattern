@@ -1,0 +1,16 @@
+{
+  "name": "strategy-pattern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:maticapuano/strategy-pattern.git",
+  "author": "Matias Capuano <maticapuano97@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev ./src",
+    "start": "rm -rf ./build & tsc && node ./dist"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.57",
+    "typescript": "^3.9.7"
+  }
+}
